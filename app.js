@@ -6,14 +6,14 @@ const _ = require("lodash");
 const mongoose = require("mongoose");
 // init
 const app = express();
-const port = "3000" || process.env.PORT;
+const port = process.env.PORT || "3000";
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.set("view engine", "ejs");
 
 // mongoose
 mongoose.connect(
-  "mongodb+srv://admin-shivam:DBtodolist_admin-shivam_safepswd_0023@todolist-lists-aws.cupxemq.mongodb.net/?retryWrites=true&w=majority"
+  "mongodb+srv://admin-shivam:DBtodolist_admin-shivam_safepswd_0023@todolist-lists-aws.cupxemq.mongodb.net/todolistDB?retryWrites=true&w=majority"
 );
 const itemSchema = new mongoose.Schema({
   tasksName: {
@@ -244,5 +244,5 @@ app.post("/:customList", function (req, res) {
 
 */
 app.listen(port, function () {
-  console.log(`server is running on port port`);
+  console.log(`server is running on port ${port}`);
 });
