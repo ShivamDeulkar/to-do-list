@@ -127,3 +127,19 @@ input:checked + .is-checked {
     --rotate: 360deg;
   }
 }
+/* media query*/
+@media (max-width: 59em) {
+  .blob {
+    width: 300px;
+  }
+}
+@media (max-width: 46em) {
+  .blob {
+    width: 250px;
+  }
+}
+@media (max-width: 22em) {
+  .blob {
+    width: 230px;
+  }
+}
