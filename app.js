@@ -12,7 +12,9 @@ app.use(express.static("public"));
 app.set("view engine", "ejs");
 
 // mongoose
-mongoose.connect("mongodb://127.0.0.1:27017/newToDoList");
+mongoose.connect(
+  "mongodb+srv://admin-shivam:DBtodolist_admin-shivam_safepswd_0023@todolist-lists-aws.cupxemq.mongodb.net/?retryWrites=true&w=majority"
+);
 const itemSchema = new mongoose.Schema({
   tasksName: {
     type: String,
