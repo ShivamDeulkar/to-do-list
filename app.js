@@ -56,7 +56,7 @@ app.get("/", function (req, res) {
         res.redirect("/");
       } else {
         console.log("loading data");
-        const currentList = allL[allL.length - 1];
+        const currentList = allL[0];
         List.find({}, { _id: 0, formatedListName: 1 }).then((allLinks) => {
           console.log("all links -->", allLinks);
           res.render("pages/list", {
